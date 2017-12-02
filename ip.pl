@@ -144,7 +144,7 @@ while (1) {
 	# Handle input...  (spew it to the console)
 	# Also, certain keys scroll the display
 	
-	$ip = `ifconfig $interface`;
+	$ip = `/sbin/ifconfig $interface`;
 	$ip =~ s/.*inet addr:(.*)  Bcast:/1/;
 	$ip = $1;
 	$pad = (20 - length($ip)) / 2;
